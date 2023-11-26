@@ -1,3 +1,42 @@
-[gd_scene format=3 uid="uid://ie51y3aop0ic"]
+[gd_scene load_steps=2 format=3 uid="uid://ie51y3aop0ic"]
 
-[node name="Login" type="Node2D"]
+[ext_resource type="Script" path="res://scenes/LoginMgr.gd" id="1_uoy2w"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uoy2w")
+
+[node name="User" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 111.0
+offset_top = 106.0
+offset_right = 514.0
+offset_bottom = 149.0
+placeholder_text = "Username"
+
+[node name="Password" type="TextEdit" parent="."]
+offset_left = 111.0
+offset_top = 149.0
+offset_right = 514.0
+offset_bottom = 192.0
+placeholder_text = "Password"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 224.0
+offset_right = 286.0
+offset_bottom = 266.0
+text = "Login"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 333.0
+offset_top = 224.0
+offset_right = 428.0
+offset_bottom = 266.0
+text = "Register"
