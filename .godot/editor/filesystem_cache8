@@ -1,0 +1,13 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1701018268
+icon.svg::CompressedTexture2D::2882592672042806852::1699731002::1699731013::1::::<><>::
+README.md::TextFile::-1::1699731002::0::1::::<><>::
+::res://scenes/::1700699557
+game.gd::GDScript::-1::1699731002::0::1::::<>Node<>::
+main.tscn::PackedScene::1272627656713562621::1700699557::0::1::::<><>::res://scenes/TestVSCode.gd
+map.tscn::PackedScene::8934689856423759060::1699731002::0::1::::<><>::uid://bhcl46pw2cxe7
+menu.gd::GDScript::-1::1699731002::0::1::::<>Control<>::
+menu.tscn::PackedScene::6867392639803611388::1699731002::0::1::::<><>::res://scenes/menu.gd
+player.gd::GDScript::-1::1699731002::0::1::::<>CharacterBody3D<>::
+player.tscn::PackedScene::1062172952297153389::1699731002::0::1::::<><>::res://scenes/player.gd<>uid://bhcl46pw2cxe7
+TestVSCode.gd::GDScript::-1::1700699499::0::1::::<>Node2D<>::

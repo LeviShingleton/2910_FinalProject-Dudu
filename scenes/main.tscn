@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://sep8yi1qvnof"]
+
+[ext_resource type="Script" path="res://scenes/TestVSCode.gd" id="1_bvtvk"]
+
+[node name="Main" type="Node"]
+
+[node name="Players" type="Node" parent="."]
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("1_bvtvk")
