@@ -1,9 +1,5 @@
-res://scenes/menu.gd
-res://scenes/game.gd
 res://scenes/main.tscn
 res://scenes/map.tscn
-res://scenes/player.gd
 res://scenes/menu.tscn
-res://scenes/LoginMgr.gd
-res://scenes/main.gd
 res://scenes/Login.tscn
+res://scenes/LoginMgr.gd

@@ -1,4 +1,7 @@
+LineEdit
 Button
+HTTPRequest
+ColorRect
 TextEdit
 Control
 Node
