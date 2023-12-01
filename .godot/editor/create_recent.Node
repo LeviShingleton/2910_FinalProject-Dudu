@@ -1,4 +1,6 @@
+TextureRect
 Panel
+ItemList
 TabContainer
 Control
 MarginContainer

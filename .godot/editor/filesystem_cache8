@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1701467925
+::res://::1701473298
 icon.svg::CompressedTexture2D::2882592672042806852::1699731002::1699731013::1::::<><>::
 README.md::TextFile::-1::1699731002::0::1::::<><>::
 ::res://addons/::1701030122
@@ -11,30 +11,32 @@ plugin.cfg::TextFile::-1::1701030123::0::1::::<><>::
 ::res://addons/godot-sqlite/bin/::1701030123
 ::res://addons/godot-sqlite/bin/libgdsqlite.macos.template_debug.framework/::1701030123
 ::res://addons/godot-sqlite/bin/libgdsqlite.macos.template_release.framework/::1701030123
-::res://Customization/::1701441188
-::res://Customization/PFP/::1701441205
-borp.png::CompressedTexture2D::5080576448874525977::1701285890::1701441205::1::::<><>::
-default.jpg::CompressedTexture2D::3324115058605721167::1701286097::1701441190::1::::<><>::
-teehee.jpg::CompressedTexture2D::7353556623631542250::1701286272::1701441190::1::::<><>::
-::res://data/::1701461703
+::res://data/::1701473298
+::res://data/Customization/::1701441188
+::res://data/Customization/PFP/::1701441205
+borp.png::CompressedTexture2D::5080576448874525977::1701285890::1701473298::1::::<><>::
+default.jpg::CompressedTexture2D::3324115058605721167::1701286097::1701473298::1::::<><>::
+teehee.jpg::CompressedTexture2D::7353556623631542250::1701286272::1701473298::1::::<><>::
 ::res://data/Font/::1701467147
 ::res://data/Font/daydream_3/::1701461718
 Daydream 1.0 Personal License.txt::TextFile::-1::1594008388::0::1::::<><>::
 Daydream.ttf::FontFile::1195886522623627991::1592657573::1701461718::1::::<><>::
 ::res://data/Font/retro_gaming/::1701467149
 Retro Gaming.ttf::FontFile::2759849705090132929::1550880030::1701467149::1::::<><>::
-::res://scenes/::1701466768
+::res://scenes/::1701472112
 LoginMgr.gd::GDScript::-1::1701466701::0::1::::<>Control<>::
-MenuMgr.gd::GDScript::-1::1701466701::0::1::::<>Control<>::
-::res://scenes/Login/::1701467909
-Login.tscn::PackedScene::571637504379273934::1701467909::0::1::::<><>::uid://bfk5k6tiegw3b::::res://data/Font/retro_gaming/Retro Gaming.ttf<>res://scenes/MenuMgr.gd<>res://scenes/Login/LoginMgr.gd
-LoginMgr.gd::GDScript::-1::1701466574::0::1::::<>Control<>::
-::res://scenes/main/::1701467908
+MenuMgr.gd::GDScript::-1::1701472112::0::1::::<>Control<>::
+::res://scenes/Login/::1701472456
+Login.tscn::PackedScene::571637504379273934::1701472456::0::1::::<><>::uid://cuni2uykhtop2::::res://scenes/Login/Style_LoginMenu.tres<>res://scenes/MenuMgr.gd<>res://scenes/Login/LoginMgr.gd
+LoginMgr.gd::GDScript::-1::1701472431::0::1::::<>Control<>::
+Style_LoginMenu.tres::Theme::6203990191333971737::1701472112::0::1::::<><>::uid://bfk5k6tiegw3b::::res://data/Font/retro_gaming/Retro Gaming.ttf<>uid://rbkcuhe82gp0::::res://data/Font/daydream_3/Daydream.ttf
+UserProfile.gd::GDScript::-1::1701472259::0::1::::UserProfile<>Node<>::
+::res://scenes/main/::1701471598
 game.gd::GDScript::-1::1701444987::0::1::::<>RefCounted<>::
 main.gd::GDScript::-1::1701221316::0::1::::<>Node<>::
 main.tscn::PackedScene::1272627656713562621::1701466743::0::1::::<><>::res://scenes/main/main.gd
 map.tscn::PackedScene::8934689856423759060::1701466213::0::1::::<><>::uid://bhcl46pw2cxe7
 menu.gd::GDScript::-1::1699731002::0::1::::<>Control<>::
-menu.tscn::PackedScene::6867392639803611388::1701467908::0::1::::<><>::res://scenes/main/menu.gd
+menu.tscn::PackedScene::6867392639803611388::1701471598::0::1::::<><>::res://scenes/main/menu.gd
 player.gd::GDScript::-1::1699731002::0::1::::<>CharacterBody3D<>::
 player.tscn::PackedScene::1062172952297153389::1701466754::0::1::::<><>::res://scenes/main/player.gd<>uid://bhcl46pw2cxe7

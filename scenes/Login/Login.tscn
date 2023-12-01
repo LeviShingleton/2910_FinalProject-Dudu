@@ -1,8 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://ie51y3aop0ic"]
+[gd_scene load_steps=9 format=3 uid="uid://ie51y3aop0ic"]
 
 [ext_resource type="Theme" uid="uid://cuni2uykhtop2" path="res://scenes/Login/Style_LoginMenu.tres" id="1_bw5jn"]
 [ext_resource type="Script" path="res://scenes/MenuMgr.gd" id="1_oxab6"]
+[ext_resource type="Script" path="res://scenes/Login/PFP.gd" id="3_55exe"]
 [ext_resource type="Script" path="res://scenes/Login/LoginMgr.gd" id="3_r5mcu"]
+[ext_resource type="Texture2D" uid="uid://bnmhxo5pf144b" path="res://data/Customization/PFP/default.jpg" id="4_sc352"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7cxcd"]
+bg_color = Color(0.168627, 0.168627, 0.168627, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_12xi5"]
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 
 [sub_resource type="Theme" id="Theme_2pvae"]
 
@@ -51,7 +66,35 @@ grow_vertical = 2
 [node name="Customization" type="Control" parent="TabContainer"]
 layout_mode = 2
 
+[node name="PlayerInfo" type="Panel" parent="TabContainer/Customization"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 13.0
+offset_right = 261.0
+offset_bottom = 113.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7cxcd")
+
+[node name="PFP" type="Panel" parent="TabContainer/Customization/PlayerInfo"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 12.0
+offset_right = 265.0
+offset_bottom = 267.0
+scale = Vector2(0.3, 0.3)
+theme_override_styles/panel = SubResource("StyleBoxFlat_12xi5")
+script = ExtResource("3_55exe")
+
+[node name="TextureRect" type="TextureRect" parent="TabContainer/Customization/PlayerInfo/PFP"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_sc352")
+
 [node name="Login" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

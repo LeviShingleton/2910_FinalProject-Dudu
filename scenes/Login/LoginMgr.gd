@@ -6,6 +6,8 @@ var dbURL = "http://localhost:80%s"
 var c_UN = ""
 var c_PW = ""
 
+var user: UserProfile
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -40,6 +42,7 @@ func HTTP_Request(result, response_code, headers, body):
 		else:
 			print("JSON Parse Error: ", json.get_error_message(), " in ", output, " at line ", json.get_error_line())
 	else:
+		$Panel/PanelContainer/MarginContainer/VBoxContainer/ErrorRect/Label.text = ""
 		$".".hide()
 
 ##### UI Events #####
@@ -79,4 +82,5 @@ func _on_http_test_pressed():
 func _notification(what):
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
 		$PanelContainer/MarginContainer/VBoxContainer/ErrorRect.hide()
+		$Panel/PanelContainer/MarginContainer/VBoxContainer/ErrorRect/Label.text = ""
 		$".".show()

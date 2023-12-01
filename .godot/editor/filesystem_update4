@@ -1,4 +1,6 @@
 res://scenes/Login/Login.tscn
 res://scenes/Login/Style_LoginMenu.tres
-res://scenes/main/menu.tscn
 res://scenes/Login/LoginMgr.gd
+res://scenes/MenuMgr.gd
+res://scenes/Login/UserProfile.gd
+res://scenes/Login/PFP.gd
