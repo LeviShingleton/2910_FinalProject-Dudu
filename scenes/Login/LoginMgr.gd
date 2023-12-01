@@ -20,7 +20,7 @@ func JsonConvertCreds() -> String:
 		return json_string
 
 func HTTP_Request(result, response_code, headers, body):
-	$PanelContainer/MarginContainer/VBoxContainer/ErrorRect.hide()
+	$Panel/PanelContainer/MarginContainer/VBoxContainer/ErrorRect.hide()
 	var format_string = "Result: %s\nResponse Code: %s\nHeaders: %s \nOutput: %s"
 	var output = body.get_string_from_utf8()
 	print(format_string % [result, response_code, headers, output])
@@ -34,11 +34,13 @@ func HTTP_Request(result, response_code, headers, body):
 		if error == OK:
 			# Retrieve data from json: string or dictionary
 			var data_received = json.data
-			$PanelContainer/MarginContainer/VBoxContainer/ErrorRect.show()
-			$PanelContainer/MarginContainer/VBoxContainer/ErrorRect/Label.text = data_received["detail"]
+			$Panel/PanelContainer/MarginContainer/VBoxContainer/ErrorRect.show()
+			$Panel/PanelContainer/MarginContainer/VBoxContainer/ErrorRect/Label.text = data_received["detail"]
+			
 		else:
 			print("JSON Parse Error: ", json.get_error_message(), " in ", output, " at line ", json.get_error_line())
-
+	else:
+		$".".hide()
 
 ##### UI Events #####
 func _OnUsernameEntered(new_text):
@@ -49,11 +51,11 @@ func _OnPasswordEntered(new_text):
 
 func _on_btn_login_pressed():
 	if (c_UN != "" && c_PW != ""):
-		var loginURL = dbURL % "/user"
+		var loginURL = dbURL % "/user/" + str(c_UN)
 		var headers = ["Content-Type: application/json"]
 		var data = JsonConvertCreds()
-		var log_string = "Login attempt via %s"
-		print(log_string % loginURL)
+		var log_string = "Login attempt via %s using %s"
+		print(log_string % [loginURL, data])
 		$HTTP_Login.request(loginURL, headers, HTTPClient.METHOD_GET, data)
 
 func _on_btn_register_pressed():
@@ -77,3 +79,4 @@ func _on_http_test_pressed():
 func _notification(what):
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
 		$PanelContainer/MarginContainer/VBoxContainer/ErrorRect.hide()
+		$".".show()
