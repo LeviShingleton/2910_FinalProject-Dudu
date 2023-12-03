@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dc1eadyxg4v4u"
-path="res://.godot/imported/teehee.jpg-36fd369f3b0ee16ffd5a543b6a9ccb26.ctex"
+uid="uid://0udnff4a87yh"
+path="res://.godot/imported/dorto.png-240866270fc22830a1ef8bc152042233.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/Customization/PFP/teehee.jpg"
-dest_files=["res://.godot/imported/teehee.jpg-36fd369f3b0ee16ffd5a543b6a9ccb26.ctex"]
+source_file="res://data/Customization/PFP/dorto.png"
+dest_files=["res://.godot/imported/dorto.png-240866270fc22830a1ef8bc152042233.ctex"]
 
 [params]
 
@@ -21,7 +21,7 @@ compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
