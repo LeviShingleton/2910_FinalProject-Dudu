@@ -298,6 +298,7 @@ text = "Test URL Request"
 [connection signal="item_selected" from="TabContainer/Customization/PlayerInfo/PFP/OptionButton" to="TabContainer/Customization/PlayerInfo/PFP" method="_On_PFP_Option_Set"]
 [connection signal="pressed" from="TabContainer/Customization/PlayerInfo/Btn_Custom_Save" to="TabContainer/Customization/PlayerInfo" method="_on_Save"]
 [connection signal="pressed" from="TabContainer/Account/Panel/Btn_Logout" to="." method="_on_btn_logout_pressed"]
+[connection signal="pressed" from="TabContainer/Account/Panel/Btn_DeleteAccount" to="." method="_on_btn_delete_account_pressed"]
 [connection signal="text_changed" from="Login/Panel/PanelContainer/MarginContainer/VBoxContainer/LE_Username" to="Login" method="_OnUsernameEntered"]
 [connection signal="text_changed" from="Login/Panel/PanelContainer/MarginContainer/VBoxContainer/LE_Password" to="Login" method="_OnPasswordEntered"]
 [connection signal="pressed" from="Login/Panel/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/Btn_Login" to="Login" method="_on_btn_login_pressed"]

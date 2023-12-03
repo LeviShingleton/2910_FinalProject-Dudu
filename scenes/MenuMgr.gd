@@ -1,7 +1,7 @@
 extends Control
 
 func _ready():
-	LoginEvents.OnLogout.connect(_reload_current_scene)
+	pass
 
 func _btn_quit():
 	_doQuit()
@@ -19,3 +19,7 @@ func _reload_current_scene():
 
 func _on_btn_logout_pressed():
 	_reload_current_scene()
+
+func _on_btn_delete_account_pressed():
+	#print("Delete")
+	LoginEvents.OnDeleteAccount.emit()

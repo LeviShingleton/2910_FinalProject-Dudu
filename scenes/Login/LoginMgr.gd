@@ -8,7 +8,7 @@ signal login_completed(UserProfile)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	LoginEvents.OnDeleteAccount.connect(_OnDeleteAccount)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -42,8 +42,12 @@ func HTTP_Request(result, response_code, headers, body):
 		$Panel/PanelContainer/MarginContainer/VBoxContainer/ErrorRect.show()
 		$Panel/PanelContainer/MarginContainer/VBoxContainer/ErrorRect/Label.text = data_received["detail"]
 	else:
-		LoginEvents.User = UserProfile.new(data_received)
-		_LoginComplete()
+		if !data_received.has("message"):
+			LoginEvents.User = UserProfile.new(data_received)
+			_LoginComplete()
+		elif data_received.has("message"):
+			LoginEvents.Reset()
+			get_tree().reload_current_scene()
 
 ##### UI Events #####
 func _OnUsernameEntered(new_text):
@@ -80,10 +84,19 @@ func _on_http_test_pressed():
 ##### UI EVENTS #####
 
 func _LoginComplete():
-	LoginEvents.emit_signal("OnLoginCompleted")
+	LoginEvents.OnLoginCompleted.emit()
 	$Panel/PanelContainer/MarginContainer/VBoxContainer/ErrorRect/Label.text = ""
 	$".".hide()
 	
+func _OnDeleteAccount():
+	if (c_UN != "" && c_PW != ""):
+		var deleteURL = LoginEvents.dbURL % "/user/%s" % LoginEvents.User.userName
+		var headers = ["Content-Type: application/json"]
+		var data = JsonConvertCreds()
+		var log_string = "Delete attempt via %s using %s"
+		print(log_string % [deleteURL, data])
+		$"../HTTP_Login".request(deleteURL, headers, HTTPClient.METHOD_DELETE, data)
+
 func ResetUI():
 	$Panel/PanelContainer/MarginContainer/VBoxContainer/ErrorRect.hide()
 	$Panel/PanelContainer/MarginContainer/VBoxContainer/ErrorRect/Label.text = ""
