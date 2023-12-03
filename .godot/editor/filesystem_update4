@@ -1,2 +1,6 @@
 res://scenes/Login/Login.tscn
+res://scenes/Login/Style_LoginMenu.tres
+res://login_events.gd
+res://scenes/Login/LoginMgr.gd
+res://scenes/MenuMgr.gd
 res://scenes/main/menu.tscn

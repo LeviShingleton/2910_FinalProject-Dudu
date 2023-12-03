@@ -6,6 +6,7 @@ var dbURL = "http://localhost:80%s"
 var User: UserProfile
 
 signal OnPFPChanged(String)
+signal OnLogout
 
 func JsonConvertUserProfile() -> String:
 		var data_to_send = {"DisplayName": User.DisplayName,"ImageURL": User.PFP,"PassHash": User.userPw, "UserName": User.userName}

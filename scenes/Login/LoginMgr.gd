@@ -8,7 +8,7 @@ signal login_completed(UserProfile)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -83,9 +83,14 @@ func _LoginComplete():
 	LoginEvents.emit_signal("OnLoginCompleted")
 	$Panel/PanelContainer/MarginContainer/VBoxContainer/ErrorRect/Label.text = ""
 	$".".hide()
+	
+func ResetUI():
+	$Panel/PanelContainer/MarginContainer/VBoxContainer/ErrorRect.hide()
+	$Panel/PanelContainer/MarginContainer/VBoxContainer/ErrorRect/Label.text = ""
+	$Panel/PanelContainer/MarginContainer/VBoxContainer/LE_Username.text = ""
+	$Panel/PanelContainer/MarginContainer/VBoxContainer/LE_Password.text = ""
+	$".".show()
 
 func _notification(what):
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
-		$Panel/PanelContainer/MarginContainer/VBoxContainer/ErrorRect.hide()
-		$Panel/PanelContainer/MarginContainer/VBoxContainer/ErrorRect/Label.text = ""
-		$".".show()
+		ResetUI()

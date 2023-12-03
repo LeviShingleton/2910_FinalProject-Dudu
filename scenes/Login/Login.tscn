@@ -167,12 +167,34 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Btn_Logout" type="Button" parent="TabContainer/Account/Panel"]
-layout_mode = 2
-offset_top = 136.0
-offset_right = 4.0
-offset_bottom = 140.0
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 30.0
+offset_top = -22.0
+offset_right = 183.0
+offset_bottom = 22.0
+grow_vertical = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
+text = "LogOut"
+
+[node name="Btn_DeleteAccount" type="Button" parent="TabContainer/Account/Panel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -183.0
+offset_top = -44.0
+offset_right = -30.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+text = "DELETE ACCOUNT"
 
 [node name="Login" type="Control" parent="."]
 layout_mode = 1
@@ -275,6 +297,7 @@ text = "Test URL Request"
 [connection signal="request_completed" from="HTTP_Login" to="Login" method="HTTP_Request"]
 [connection signal="item_selected" from="TabContainer/Customization/PlayerInfo/PFP/OptionButton" to="TabContainer/Customization/PlayerInfo/PFP" method="_On_PFP_Option_Set"]
 [connection signal="pressed" from="TabContainer/Customization/PlayerInfo/Btn_Custom_Save" to="TabContainer/Customization/PlayerInfo" method="_on_Save"]
+[connection signal="pressed" from="TabContainer/Account/Panel/Btn_Logout" to="." method="_on_btn_logout_pressed"]
 [connection signal="text_changed" from="Login/Panel/PanelContainer/MarginContainer/VBoxContainer/LE_Username" to="Login" method="_OnUsernameEntered"]
 [connection signal="text_changed" from="Login/Panel/PanelContainer/MarginContainer/VBoxContainer/LE_Password" to="Login" method="_OnPasswordEntered"]
 [connection signal="pressed" from="Login/Panel/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/Btn_Login" to="Login" method="_on_btn_login_pressed"]

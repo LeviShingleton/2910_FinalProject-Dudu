@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1701573454
+::res://::1701573572
 icon.svg::CompressedTexture2D::2882592672042806852::1699731002::1699731013::1::::<><>::
 login_events.gd::GDScript::-1::1701570610::0::1::::<>Node<>::
 README.md::TextFile::-1::1701554864::0::1::::<><>::
@@ -39,19 +39,19 @@ Retro Gaming.ttf::FontFile::2759849705090132929::1550880030::1701467149::1::::<>
 ::res://scenes/::1701554864
 LoginMgr.gd::GDScript::-1::1701466701::0::1::::<>Control<>::
 MenuMgr.gd::GDScript::-1::1701554864::0::1::::<>Control<>::
-::res://scenes/Login/::1701573415
-Login.tscn::PackedScene::571637504379273934::1701573415::0::1::::<><>::uid://cuni2uykhtop2::::res://scenes/Login/Style_LoginMenu.tres<>res://scenes/MenuMgr.gd<>res://scenes/Login/PFP.gd<>res://scenes/Login/LoginMgr.gd<>res://scenes/Login/PlayerInfo.gd<>res://data/Customization/PFP/default.jpg
+::res://scenes/Login/::1701573476
+Login.tscn::PackedScene::571637504379273934::1701573476::0::1::::<><>::uid://cuni2uykhtop2::::res://scenes/Login/Style_LoginMenu.tres<>res://scenes/MenuMgr.gd<>res://scenes/Login/PFP.gd<>res://scenes/Login/LoginMgr.gd<>res://scenes/Login/PlayerInfo.gd<>uid://ctqpagudoane4::::res://data/Customization/PFP/default.png
 LoginMgr.gd::GDScript::-1::1701572910::0::1::::<>Control<>::
 PFP.gd::GDScript::-1::1701569051::0::1::::<>Panel<>::
 PlayerInfo.gd::GDScript::-1::1701571861::0::1::::<>Panel<>::
-Style_LoginMenu.tres::Theme::6203990191333971737::1701570388::0::1::::<><>::uid://bfk5k6tiegw3b::::res://data/Font/retro_gaming/Retro Gaming.ttf<>uid://rbkcuhe82gp0::::res://data/Font/daydream_3/Daydream.ttf
+Style_LoginMenu.tres::Theme::6203990191333971737::1701570388::0::1::::<><>::uid://bfk5k6tiegw3b
 UserProfile.gd::GDScript::-1::1701572583::0::1::::UserProfile<>Node<>::
-::res://scenes/main/::1701573415
+::res://scenes/main/::1701573498
 game.gd::GDScript::-1::1701444987::0::1::::<>RefCounted<>::
 main.gd::GDScript::-1::1701221316::0::1::::<>Node<>::
 main.tscn::PackedScene::1272627656713562621::1701466743::0::1::::<><>::res://scenes/main/main.gd
 map.tscn::PackedScene::8934689856423759060::1701466213::0::1::::<><>::uid://bhcl46pw2cxe7
 menu.gd::GDScript::-1::1699731002::0::1::::<>Control<>::
-menu.tscn::PackedScene::6867392639803611388::1701573415::0::1::::<><>::res://scenes/main/menu.gd
+menu.tscn::PackedScene::6867392639803611388::1701573498::0::1::::<><>::res://scenes/main/menu.gd
 player.gd::GDScript::-1::1699731002::0::1::::<>CharacterBody3D<>::
 player.tscn::PackedScene::1062172952297153389::1701466754::0::1::::<><>::res://scenes/main/player.gd<>uid://bhcl46pw2cxe7
